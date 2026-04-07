@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Red Sea Jeddah</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .morph-container {
+            position: relative;
+            cursor: pointer;
+            max-width: 800px;
+            margin: 20px auto;
+            height: 450px; /* Adjust based on image aspect ratio */
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .morph-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.8s ease-in-out;
+        }
+        .sunset-img {
+            opacity: 0;
+        }
+        .morph-container.active .sunset-img {
+            opacity: 1;
+        }
+        .morph-container.active .daytime-img {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About the Red Sea</h1>
+        <p>A Natural Wonder of the World</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="activities.html">Activities</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="videos.html">Videos</a>
+        <a href="animation.html">Animation</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <div class="container">
+        <section>
+            <h2>The Magic of the Red Sea</h2>
+            <p>The Red Sea is one of the most important marine ecosystems on Earth. Its waters are exceptionally warm and clear, providing an ideal environment for coral reefs and diverse marine species. Jeddah's unique location on its shores has made it a historical gateway and a modern tourist destination.</p>
+            
+            <div class="media-container" style="margin-top: 30px;">
+                <h3>Text Reflection Effect</h3>
+                <img src="images/about-reflection.jpg" alt="Text Reflection Effect" style="border: 5px solid #0077be;">
+                <p><i>Image with Text Reflection Effect (Gimp Style)</i></p>
+            </div>
+            
+            <div class="media-container" style="margin-top: 40px;">
+                <h3>Morphing Effect (Click the Image)</h3>
+                <div class="morph-container" onclick="this.classList.toggle('active')">
+                    <img src="images/daytime.jpg" alt="Daytime View" class="daytime-img">
+                    <img src="images/sunset.jpg" alt="Sunset View" class="sunset-img">
+                </div>
+                <p><i>Morphing Effect: Click to transition between Daytime and Sunset (Gimp Style)</i></p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2026 Red Sea Jeddah Tourism Project - ITEC-241</p>
+    </footer>
+</body>
+</html>
